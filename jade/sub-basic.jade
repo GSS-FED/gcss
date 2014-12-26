@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    // mobile use
+    meta(name="viewport", content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width")
+    // mobile use end
+    meta(name="apple-mobile-web-app-capable",content="yes")
+    block head
+    link(href="../css/basic.css",rel="stylesheet")
+    block css
+    script(src="../js/jquery-1.11.1.min.js")
+    script(src="../js/action.js")
+    block script
+  body.gcss
+    // ap-wrap
+    .ap-wrap
+      // ap-nav
+      nav.ap-nav
+        block nav-var
+        include l-module/nav
+      // ap-nav end
+      // ap-header
+      header.ap-header
+        .header-box.removeTextNodes
+          a.nav-ctrl
+            span.icon-brug
+          block title
+      // ap-header end
+      // ap-main
+      main.ap-main
+        .fn-body
+          block content
+      // ap-main end
+    // ap-wrap end
+
+    block script-bodyend
