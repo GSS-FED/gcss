@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- mobile use-->
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <!-- mobile use end-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Variables</title>
+    <link href="css/basic.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/action.js"></script>
+  </head>
+  <body class="gcss">
+    <!-- ap-wrap-->
+    <div class="ap-wrap">
+      <!-- ap-nav-->
+      <nav class="ap-nav">
+        <div class="info-box">
+          <h2 class="logo">GCSS</h2>
+        </div>
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html" class="nav-link [object Object]">概觀</a></li>
+          <li class="nav-item"><a href="style-guide.html" class="nav-link">Style guide</a></li>
+          <li class="nav-item"><a href="file-array.html" class="nav-link">檔案結構</a></li>
+          <li class="nav-item has-child"><a href="base-group.html" class="nav-link">Base 組成</a>
+            <ul class="sub-nav is-show">
+              <li class="nav-item"><a href="base-group/reset.html" class="nav-link">reset</a></li>
+              <li class="nav-item"><a href="base-group/variables.html" class="nav-link">variables</a></li>
+              <li class="nav-item"><a href="base-group/mixin.html" class="nav-link">mixin</a></li>
+              <li class="nav-item"><a href="base-group/tools.html" class="nav-link">tools</a></li>
+              <li class="nav-item"><a href="base-group/base.html" class="nav-link">base</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- ap-nav end-->
+      <!-- ap-header-->
+      <header class="ap-header">
+        <div class="header-box removeTextNodes"><a class="nav-ctrl"><span class="icon-brug"></span></a>
+          <h2 class="fn-title">Variables</h2>
+        </div>
+      </header>
+      <!-- ap-header end-->
+      <!-- ap-main-->
+      <main class="ap-main">
+        <div class="fn-body">
+          <article class="article-box">
+            <p>定義專案／產品的 SCSS 變數。</p>
+            <h4>變數定義有以下規則：</h4>
+            <ul class="arti-list">
+              <li class="list-item">$theme: product name; 定義一個 theme name 通常是專案／產品名稱。</li>
+              <li class="list-item">$c-xxx 定義顏色</li>
+              <li class="list-item">$componentName-xxx 定義組件名稱</li>
+              <li class="list-item">$structureName-xxx 定義結構名稱</li>
+            </ul>
+            <pre class="code-box"><code><span class="c">// -------------------------------------</span><span class="c">//   theme </span><span class="c">// -------------------------------------</span><span class="t"> </span><span class="n">$theme:            product-name;</span><span class="t"> </span><span class="c">// -------------------------------------</span><span class="c">//   color</span><span class="c">// -------------------------------------</span><span class="t"> </span><span class="c">// ----- gray ----- //</span><span class="t"> </span><span class="n">$c-gray-darker:    <span class="nv">lighten(#000, 13.5%) !default; // #222</span></span><span class="n">$c-gray-dark:      <span class="nv">lighten(#000, 20%) !default;   // #333</span></span><span class="n">$c-gray:           <span class="nv">lighten(#000, 33.5%) !default; // #555</span></span><span class="n">$c-gray-light:     <span class="nv">lighten(#000, 60%) !default;   // #999</span></span><span class="n">$c-gray-lighter:   <span class="nv">lighten(#000, 93.5%) !default; // #eee</span></span><span class="t"> </span><span class="c">// ----- Base ----- //</span><span class="t"> </span><span class="n">$c-primary:        <span class="nv">#xxx !default;</span></span><span class="n">$c-success:        <span class="nv">#xxx !default;</span></span><span class="n">$c-danger:         <span class="nv">#xxx !default;</span></span><span class="n">$c-info:           <span class="nv">#xxx !default;</span></span><span class="n">$c-inverse:        <span class="nv">#xxx !default;</span></span><span class="t"> </span><span class="n">$c-decor-light:    <span class="nv">#xxx !default;</span></span><span class="n">$c-decor-dark:     <span class="nv">#xxx !default;</span></span><span class="n">$c-border-color:   <span class="nv">#xxx !default;</span></span><span class="t"> </span><span class="c">// ----- link ----- //</span><span class="t"> </span><span class="n">$c-link:           <span class="nv">#xxx !default;</span></span><span class="n">$c-link-hover:     <span class="nv">darken(#xxx, 10) !default;</span></span><span class="t"> </span><span class="c">// -------------------------------------</span><span class="c">//   base</span><span class="c">// -------------------------------------</span><span class="t"> </span><span class="c">// ----- font size ----- //</span><span class="t"> </span><span class="c">// compass</span><span class="n">$base-line-height: <span class="nv">24px;</span></span><span class="n">$rhythm-unit:      <span class="nv">"rem";</span></span><span class="t"> </span><span class="c">// base</span><span class="n">$font-size:        <span class="nv">15px;</span></span><span class="n">$font-size-s:      <span class="nv">13px;</span></span><span class="n">$font-size-l:      <span class="nv">18px;</span></span><span class="t"> </span><span class="c">// ----- border style ----- //</span><span class="t"> </span><span class="n">$border-radius:    <span class="nv">3px !default;</span></span><span class="n">$border-style:     <span class="nv">solid !default;</span></span><span class="n">$border-width:     <span class="nv">1px !default;</span></span><span class="n">$border:           <span class="nv">$border-width $border-style $c-gray-light;</span></span><span class="t"> </span><span class="c">// ----- box shadow ----- //</span><span class="t"> </span><span class="n">$box-shadow:       <span class="nv">0 2px 5px rgba($c-gray-darker, .25) !default;</span></span></code></pre>
+          </article>
+        </div>
+      </main>
+      <!-- ap-main end-->
+    </div>
+    <!-- ap-wrap end-->
+  </body>
+</html>

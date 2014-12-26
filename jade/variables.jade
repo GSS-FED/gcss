@@ -1,0 +1,108 @@
+extends basic
+
+block head
+  title Variables
+
+block title
+  h2.fn-title Variables
+
+block nav
+  - var currentUrl = "/base-group/variables.html"
+  include l-module/nav
+
+block content
+  article.article-box
+    p 定義專案／產品的 SCSS 變數。
+    h4 變數定義有以下規則：
+    ul.arti-list
+      li.list-item $theme: product name; 定義一個 theme name 通常是專案／產品名稱。
+      li.list-item $c-xxx 定義顏色
+      li.list-item $componentName-xxx 定義組件名稱
+      li.list-item $structureName-xxx 定義結構名稱
+    pre.code-box
+      code
+        span.c // -------------------------------------
+        span.c //   theme 
+        span.c // -------------------------------------
+        span.t 
+        span.n $theme:            product-name;
+        span.t 
+        span.c // -------------------------------------
+        span.c //   color
+        span.c // -------------------------------------
+        span.t 
+        span.c // ----- gray ----- //
+        span.t 
+        span.n $c-gray-darker:    
+          span.nv lighten(#000, 13.5%) !default; // #222
+        span.n $c-gray-dark:      
+          span.nv lighten(#000, 20%) !default;   // #333
+        span.n $c-gray:           
+          span.nv lighten(#000, 33.5%) !default; // #555
+        span.n $c-gray-light:     
+          span.nv lighten(#000, 60%) !default;   // #999
+        span.n $c-gray-lighter:   
+          span.nv lighten(#000, 93.5%) !default; // #eee
+        span.t 
+        span.c // ----- Base ----- //
+        span.t 
+        span.n $c-primary:        
+          span.nv #xxx !default;
+        span.n $c-success:        
+          span.nv #xxx !default;
+        span.n $c-danger:         
+          span.nv #xxx !default;
+        span.n $c-info:           
+          span.nv #xxx !default;
+        span.n $c-inverse:        
+          span.nv #xxx !default;
+        span.t 
+        span.n $c-decor-light:    
+          span.nv #xxx !default;
+        span.n $c-decor-dark:     
+          span.nv #xxx !default;
+        span.n $c-border-color:   
+          span.nv #xxx !default;
+        span.t 
+        span.c // ----- link ----- //
+        span.t 
+        span.n $c-link:           
+          span.nv #xxx !default;
+        span.n $c-link-hover:     
+          span.nv darken(#xxx, 10) !default;
+        span.t 
+        span.c // -------------------------------------
+        span.c //   base
+        span.c // -------------------------------------
+        span.t 
+        span.c // ----- font size ----- //
+        span.t 
+        span.c // compass
+        span.n $base-line-height: 
+          span.nv 24px;
+        span.n $rhythm-unit:      
+          span.nv "rem";
+        span.t 
+        span.c // base
+        span.n $font-size:        
+          span.nv 15px;
+        span.n $font-size-s:      
+          span.nv 13px;
+        span.n $font-size-l:      
+          span.nv 18px;
+        span.t 
+        span.c // ----- border style ----- //
+        span.t 
+        span.n $border-radius:    
+          span.nv 3px !default;
+        span.n $border-style:     
+          span.nv solid !default;
+        span.n $border-width:     
+          span.nv 1px !default;
+        span.n $border:           
+          span.nv $border-width $border-style $c-gray-light;
+        span.t 
+        span.c // ----- box shadow ----- //
+        span.t 
+        span.n $box-shadow:       
+          span.nv 0 2px 5px rgba($c-gray-darker, .25) !default;

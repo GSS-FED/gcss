@@ -1,0 +1,78 @@
+// -------------------------------------
+//   theme 
+// -------------------------------------
+
+$theme:             gcss;
+
+// -------------------------------------
+//   color
+// -------------------------------------
+
+// ----- gray ----- //
+
+$c-gray-darker:     lighten(#000, 13.5%) !default; // #222
+$c-gray-dark:       lighten(#000, 20%) !default;   // #333
+$c-gray:            lighten(#000, 33.5%) !default; // #555
+$c-gray-light:      lighten(#000, 60%) !default;   // #999
+$c-gray-lighter:    lighten(#000, 93.5%) !default; // #eee
+
+// ----- Base color ----- //
+
+$c-brand:           #0E84D9 !default;
+$c-primary:         #51A4DF !default;
+// $c-comp-1:       ;
+$c-success:         #07ba7f !default;
+$c-danger:          #d9534f !default;
+$c-info:            #5bc0de !default;
+$c-inverse:         #4d4d4d !default;
+
+$c-text:            $c-gray-dark !default;
+$c-text-inverse:    invert($c-gray-dark) !default;
+$c-decor-light:     #243B59 !default;
+$c-decor-dark:      #2d3540 !default;
+$c-border-color:    darken($c-gray-lighter, 10%); // #d4d4d4
+$c-main-bg:         darken($c-gray-lighter, 3%) !default;
+$c-nav-bg:          #38414D !default;
+
+// ----- link ----- //
+
+$c-link:            #0c7ff3 !default;
+$c-link-hover:      darken($c-link, 15%) !default;
+
+// ----- madule ----- //
+
+// -------------------------------------
+//   base
+// -------------------------------------
+
+// ----- font size ----- //
+
+// compass vertical rhythm
+$base-line-height:  24px;
+$rhythm-unit:       "rem";
+
+// base
+$font-size:         15px !default;
+$font-size-s:       13px !default;
+$font-size-l:       18px !default;
+
+// ----- border style ----- //
+
+$border-radius:     3px !default;
+$border-style:      solid !default;
+$border-width:      1px !default;
+$border:            $border-width $border-style $c-border-color;
+
+// ----- box shadow ----- //
+
+$box-shadow:        0 2px 5px rgba($c-gray-darker, .25) !default;
+
+// ----- z-index ----- //
+
+$z-layers: (
+  "popup":          9000,
+  "fix":            100,
+  "default":        1,
+  "below":          -1,
+  "hidden":         -9000
+);

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- mobile use-->
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <!-- mobile use end-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>檔案結構</title>
+    <link href="css/basic.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/action.js"></script>
+  </head>
+  <body class="gcss">
+    <!-- ap-wrap-->
+    <div class="ap-wrap">
+      <!-- ap-nav-->
+      <nav class="ap-nav">
+        <div class="info-box">
+          <h2 class="logo">GCSS</h2>
+        </div>
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html" class="nav-link [object Object]">概觀</a></li>
+          <li class="nav-item"><a href="style-guide.html" class="nav-link">Style guide</a></li>
+          <li class="nav-item"><a href="file-array.html" class="nav-link">檔案結構</a></li>
+          <li class="nav-item has-child"><a href="base-group.html" class="nav-link">Base 組成</a>
+            <ul class="sub-nav is-show">
+              <li class="nav-item"><a href="base-group/reset.html" class="nav-link">reset</a></li>
+              <li class="nav-item"><a href="base-group/variables.html" class="nav-link">variables</a></li>
+              <li class="nav-item"><a href="base-group/mixin.html" class="nav-link">mixin</a></li>
+              <li class="nav-item"><a href="base-group/tools.html" class="nav-link">tools</a></li>
+              <li class="nav-item"><a href="base-group/base.html" class="nav-link">base</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- ap-nav end-->
+      <!-- ap-header-->
+      <header class="ap-header">
+        <div class="header-box removeTextNodes"><a class="nav-ctrl"><span class="icon-brug"></span></a>
+          <h1 class="fn-title">檔案結構</h1>
+        </div>
+      </header>
+      <!-- ap-header end-->
+      <!-- ap-main-->
+      <main class="ap-main">
+        <div class="fn-body">
+          <article class="article-box">
+            <h3 class="arti-title">SCSS 檔案結構</h3>
+            <p>basic.scss 是我們每個頁面的最為基本的 SCSS 檔案，每個頁面都必須讀入。但是可以在依照不同的情境頁面或者功能頁面在增加讀入不同的 SCSS 檔案。</p>
+            <pre class="code-box"><code><span class="t">basic.scss - import 基本的 SCSS。</span><span class="t">_reset.css - browser reset 用 CSS。</span><span class="t">_variable.scss - 設置變數。</span><span class="t">_mixin.scss - 放置 mixin 的，不會被 compile css 的部分。</span><span class="t">_tools.scss - 設定通用的元件。</span><span class="t">_base.scss - 放置產品／專案通用設定。</span><span class="t">_ap-layout.scss - 放大 layout 部分，天、地、基本 RWD。</span><span class="t">          </span><span class="t">module/ 用來放置表單，表格，按鈕...等，一些通用模組元件。</span><span class="t">  ├ _fields.scss</span><span class="t">  ├ _btn.scss</span><span class="t">  ├ _tool-tips.scss</span><span class="t">  ├ _table.scss</span><span class="t">  ├ _grid.scss</span><span class="t">  ├ _nav.scss</span><span class="t">  └ ...</span><span class="t">          </span><span class="t">pages/ 給需要特定的排版頁面使用。</span><span class="t">  ├ article.scss </span><span class="t">  ├ home.scss</span><span class="t">  ├ login.scss</span><span class="t">  └ ...</span></code></pre>
+            <h3 class="arti-title">basic import</h3>
+            <p>在 basic.scss 的檔案 import 順序。</p>
+            <pre class="code-box"><code><span class="c">// *************************************</span><span class="c">//</span><span class="c">//   product name</span><span class="c">//   -> product 說明</span><span class="c">//</span><span class="c">// *************************************</span><span class="c"> </span><span class="c">// -------------------------------------</span><span class="c">//   Framework</span><span class="c">// -------------------------------------</span><span class="t"> </span><span class="nt">@import “compass”;</span><span class="t"> </span><span class="c">// -------------------------------------</span><span class="c">//   base</span><span class="c">// -------------------------------------</span><span class="t"> </span><span class="nt">@import “reset”;</span><span class="nt">@import “variables”;</span><span class="nt">@import “mixin”;</span><span class="nt">@import “base”;</span><span class="t"> </span><span class="c">// -------------------------------------</span><span class="c">//   layout</span><span class="c">// -------------------------------------</span><span class="t"> </span><span class="nt">@import “ap-layout”;</span><span class="t"> </span><span class="c">// -------------------------------------</span><span class="c">//   module</span><span class="c">// -------------------------------------</span><span class="t"> </span><span class="nt">@import “grid”;</span><span class="nt">@import “fields”;</span><span class="nt">@import “btn”;</span><span class="nt">@import “tool-tips”;</span><span class="nt">@import “table”;</span><span class="nt">@import “nav”;</span><span class="nt">…</span><span class="t"> </span><span class="c">// -------------------------------------</span><span class="c">//   Inbox</span><span class="c">// -------------------------------------</span></code></pre>
+            <h3 class="arti-title">Inbox</h3>
+            <p>與其他開發人員合作有時候會有點困難，這邊可以新增其他臨時的 CSS 樣式，可以使維護人員適當的新增以及覆寫樣式。</p>
+          </article>
+        </div>
+      </main>
+      <!-- ap-main end-->
+    </div>
+    <!-- ap-wrap end-->
+  </body>
+</html>

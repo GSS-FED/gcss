@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- mobile use-->
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <!-- mobile use end-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Style Guide</title>
+    <link href="css/basic.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/action.js"></script>
+  </head>
+  <body class="gcss">
+    <!-- ap-wrap-->
+    <div class="ap-wrap">
+      <!-- ap-nav-->
+      <nav class="ap-nav">
+        <div class="info-box">
+          <h2 class="logo">GCSS</h2>
+        </div>
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html" class="nav-link [object Object]">概觀</a></li>
+          <li class="nav-item"><a href="style-guide.html" class="nav-link">Style guide</a></li>
+          <li class="nav-item"><a href="file-array.html" class="nav-link">檔案結構</a></li>
+          <li class="nav-item has-child"><a href="base-group.html" class="nav-link">Base 組成</a>
+            <ul class="sub-nav is-show">
+              <li class="nav-item"><a href="base-group/reset.html" class="nav-link">reset</a></li>
+              <li class="nav-item"><a href="base-group/variables.html" class="nav-link">variables</a></li>
+              <li class="nav-item"><a href="base-group/mixin.html" class="nav-link">mixin</a></li>
+              <li class="nav-item"><a href="base-group/tools.html" class="nav-link">tools</a></li>
+              <li class="nav-item"><a href="base-group/base.html" class="nav-link">base</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- ap-nav end-->
+      <!-- ap-header-->
+      <header class="ap-header">
+        <div class="header-box removeTextNodes"><a class="nav-ctrl"><span class="icon-brug"></span></a>
+          <h2 class="fn-title">Style Guide</h2>
+        </div>
+      </header>
+      <!-- ap-header end-->
+      <!-- ap-main-->
+      <main class="ap-main">
+        <div class="fn-body">
+          <article class="article-box">
+            <p>為了建立團隊彼此的默契，並定要制定一些規範來約束，使彼的溝通時間減少，默契增加。</p>
+            <h3 class="arti-title">coding style</h3>
+            <ul class="arti-list">
+              <li class="list-item">使用 soft tab，2 space 來縮排。</li>
+              <li class="list-item">大括號 { 前面要有空白。
+                <ul class="sub-arti-list">
+                  <li class="list-item">正確 .classname { </li>
+                  <li class="list-item">錯誤 .classname{</li>
+                </ul>
+              </li>
+              <li class="list-item">冒號 : 後面要有空白。
+                <ul class="sub-arti-list">
+                  <li class="list-item">正確 color: #333;</li>
+                  <li class="list-item">錯誤 color:#333;</li>
+                </ul>
+              </li>
+              <li class="list-item">統一使用 - 符號做命名連接。</li>
+              <li class="list-item">使用 // 做註解，不會被 compile 出來。</li>
+              <li class="list-item">最外層的層級結束時，加上 // class-name end（如果有N行，底下有繼承的 class name）</li>
+            </ul>
+            <pre class="code-box"><code><span class="c">// Good example</span><span class="n">.classname <span class="p">{</span></span><span class="n">  .subclassname <span class="p">{</span></span><span class="nt">    padding: <span class="nv">8px 10px;</span></span><span class="nt">    color: <span class="nv">#333;</span></span><span class="nt">    background: <span class="nv">rgba(0, 0, 0, .4);</span></span><span class="n">  <span class="p">}</span></span><span class="n"><span class="p">} </span><span class="c-end">// classname end</span></span></code></pre>
+            <h3 class="arti-title">coding order</h3>
+            <p>mixin ＆ extend 看類型放在相對應位置，自定義的樣式 mixin 跟 extend 放在最前面。</p>
+            <ol class="arti-list order">
+              <li class="list-item">include mixin ＆ extend</li>
+              <li class="list-item">Position</li>
+              <li class="list-item">Box model</li>
+              <li class="list-item">Typographic</li>
+              <li class="list-item">Style</li>
+              <li class="list-item">other</li>
+            </ol>
+            <h3 class="arti-title">comment（取自 MVCSS）</h3>
+            <pre class="code-box"><code><span class="c">// *************************************
+//
+//   LEVEL 1
+//   -> DESCRIPTION
+//
+// *************************************
+　
+// -------------------------------------
+//   LEVEL 2
+// -------------------------------------
+　
+// ----- LEVEL 3 ----- //
+　
+// LEVEL 4</span></code></pre>
+            <h3 class="arti-title">命名說明</h3>
+            <p>把常用到的命名名稱，直接定規則下來。</p>
+            <h4>前綴詞部分</h4>
+            <ul class="arti-list">
+              <li class="list-item">ap - application 使用於 layout。</li>
+              <li class="list-item">fn - function 表示功能。</li>
+            </ul>
+            <h4>layout</h4>
+            <ul class="arti-list">
+              <li class="list-item">wrap - 最外包裝，定義於 body 之下，包覆全體內容。</li>
+              <li class="list-item">header - 標頭。</li>
+              <li class="list-item">nav - 導覽列。</li>
+              <li class="list-item">sub-nav - 次要導航。</li>
+              <li class="list-item">menu - 菜單有別於 nav，偏向有下拉的選單使用。</li>
+              <li class="list-item">side - 側邊欄。</li>
+              <li class="list-item">main - 用來裝主要內容。</li>
+              <li class="list-item">article - 文章部分。</li>
+              <li class="list-item">container - 容器、集結箱之意，主要包覆內容外框。</li>
+              <li class="list-item">box - 外容器，對某個內容加上外容器使用，用定義裡面變化。</li>
+              <li class="list-item">inner - 內包裝，外包裝反之定義。</li>
+              <li class="list-item">footer - 註腳。</li>
+            </ul>
+            <h4>元件部分</h4>
+            <ul class="arti-list">
+              <li class="list-item">btn - 按鈕。</li>
+              <li class="list-item">tab - 分頁。</li>
+              <li class="list-item">fields - input, checkbox, radiobox …等。</li>
+              <li class="list-item">icon - 圖示</li>
+              <li class="list-item">notify - 提示窗</li>
+            </ul>
+            <h4>工具部分</h4>
+            <ul class="arti-list">
+              <li class="list-item">toolbar - 工具列。</li>
+              <li class="list-item">tool-tip - 提示。</li>
+            </ul>
+            <h4>搜尋</h4>
+            <ul class="arti-list">
+              <li class="list-item">search - 搜尋。</li>
+              <li class="list-item">search-input - 搜尋輸入。</li>
+              <li class="list-item">search-result - 搜尋結果。</li>
+            </ul>
+            <h4>廣告</h4>
+            <ul class="arti-list">
+              <li class="list-item">banner -  廣告。</li>
+            </ul>
+            <h4>版權資訊</h4>
+            <ul class="arti-list">
+              <li class="list-item">copyright - 版權所屬。</li>
+            </ul>
+            <h3 class="arti-title">命名風格</h3>
+            <p>每個人命名的方式，往往會造成合作上的困難，所以制定一套規則，會讓事情簡單很多。</p>
+            <h4>開頭縮寫表示</h4>
+            <p>用英文縮寫來更簡潔的描述 class 的命名，以及分類。</p>
+            <pre class="code-box"><code><span class="c">// -------------------------------------
+//   layout setting
+// -------------------------------------
+ </span><span class="n">.ap-header <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span><span class="n">.ap-main <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span><span class="n">.ap-side <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span><span class="n">.ap-footer <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span><span class="c">  
+// -------------------------------------
+//   function setting
+// -------------------------------------
+ </span><span class="n">.fn-head <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span><span class="n">.fn-tool <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span><span class="n">.fn-title <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span></code></pre>
+            <p>以及常用的命名縮寫 button, column, grid…等。</p>
+            <pre class="code-box"><code><span class="n">.btn-xxx <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span><span class="n">.col-xxx <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span><span class="n">.g-xxx <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span></code></pre>
+            <h4>結尾縮寫表示</h4>
+            <p>我們會對尺寸做縮寫，並用一個 - 做連結。</p>
+            <pre class="code-box"><code><span class="c">// size setting</span><span class="n">-xs (extra small)</span><span class="n">-s  (small)</span><span class="n">-m  (medium)</span><span class="n">-l  (large)</span><span class="n">-xl (extra large)</span></code></pre>
+            <h3 class="arti-title">狀態</h3>
+            <p>動詞命名，由 js 觸發的動作，使用 is-接動詞。</p>
+            <pre class="code-box"><code><span class="n">.is-active</span><span class="n">.is-show</span><span class="n">.is-hide</span></code></pre>
+            <p>如果要定義不同狀態的 is-xxx 就把要變更狀態的 class 後面加上 is-xxx。</p>
+            <pre class="code-box"><code><span class="n">.btn-primary.is-active <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span><span class="n">.tab-item.is-active <span class="p">{ </span><span class="nv">… </span><span class="p">}</span></span></code></pre>
+            <p>出現跟消失用 show 跟 hide 不要用 in 跟 out，以免照成語意上的混淆。</p>
+            <h3 class="arti-title">圖像</h3>
+            <p> 圖像命名的方式</p>
+            <h4>把縮寫至於後方</h4>
+            <ul class="arti-list">
+              <li class="list-item">xxx-bg 用於背景</li>
+              <li class="list-item">xxx-logo 用於 logo</li>
+              <li class="list-item">xxx-img 用於內容圖像</li>
+            </ul>
+            <h4>但是 icon 是例外，icon 的命名如下。</h4>
+            <ul class="arti-list">
+              <li class="list-item">picon-xxx 用於 icon</li>
+            </ul>
+          </article>
+        </div>
+      </main>
+      <!-- ap-main end-->
+    </div>
+    <!-- ap-wrap end-->
+  </body>
+</html>

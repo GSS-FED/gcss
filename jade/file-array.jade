@@ -1,0 +1,89 @@
+extends basic
+
+block head
+  title 檔案結構
+
+block title
+  h1.fn-title 檔案結構
+
+block nav
+  - var currentUrl = "file-array.html"
+  include l-module/nav
+
+block content
+  article.article-box
+    h3.arti-title SCSS 檔案結構
+    p basic.scss 是我們每個頁面的最為基本的 SCSS 檔案，每個頁面都必須讀入。但是可以在依照不同的情境頁面或者功能頁面在增加讀入不同的 SCSS 檔案。
+    pre.code-box
+      code
+        span.t basic.scss - import 基本的 SCSS。
+        span.t _reset.css - browser reset 用 CSS。
+        span.t _variable.scss - 設置變數。
+        span.t _mixin.scss - 放置 mixin 的，不會被 compile css 的部分。
+        span.t _tools.scss - 設定通用的元件。
+        span.t _base.scss - 放置產品／專案通用設定。
+        span.t _ap-layout.scss - 放大 layout 部分，天、地、基本 RWD。
+        span.t           
+        span.t module/ 用來放置表單，表格，按鈕...等，一些通用模組元件。
+        span.t   ├ _fields.scss
+        span.t   ├ _btn.scss
+        span.t   ├ _tool-tips.scss
+        span.t   ├ _table.scss
+        span.t   ├ _grid.scss
+        span.t   ├ _nav.scss
+        span.t   └ ...
+        span.t           
+        span.t pages/ 給需要特定的排版頁面使用。
+        span.t   ├ article.scss 
+        span.t   ├ home.scss
+        span.t   ├ login.scss
+        span.t   └ ...
+    h3.arti-title basic import
+    p 在 basic.scss 的檔案 import 順序。
+    pre.code-box
+      code
+        span.c // *************************************
+        span.c //
+        span.c //   product name
+        span.c //   -> product 說明
+        span.c //
+        span.c // *************************************
+        span.c 
+        span.c // -------------------------------------
+        span.c //   Framework
+        span.c // -------------------------------------
+        span.t 
+        span.nt @import “compass”;
+        span.t 
+        span.c // -------------------------------------
+        span.c //   base
+        span.c // -------------------------------------
+        span.t 
+        span.nt @import “reset”;
+        span.nt @import “variables”;
+        span.nt @import “mixin”;
+        span.nt @import “base”;
+        span.t 
+        span.c // -------------------------------------
+        span.c //   layout
+        span.c // -------------------------------------
+        span.t 
+        span.nt @import “ap-layout”;
+        span.t 
+        span.c // -------------------------------------
+        span.c //   module
+        span.c // -------------------------------------
+        span.t 
+        span.nt @import “grid”;
+        span.nt @import “fields”;
+        span.nt @import “btn”;
+        span.nt @import “tool-tips”;
+        span.nt @import “table”;
+        span.nt @import “nav”;
+        span.nt …
+        span.t 
+        span.c // -------------------------------------
+        span.c //   Inbox
+        span.c // -------------------------------------
+    h3.arti-title Inbox
+    p 與其他開發人員合作有時候會有點困難，這邊可以新增其他臨時的 CSS 樣式，可以使維護人員適當的新增以及覆寫樣式。

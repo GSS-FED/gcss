@@ -1,0 +1,94 @@
+extends basic
+
+block head
+  title base
+
+block title
+  h1.fn-title Base
+
+block nav
+  - var currentUrl = "/base-group/base.html"
+  include l-module/nav  
+
+block content
+  article.article-box
+    p 針對 HTML 的元素以及基本文字字級的設定。先定義基本的 h1\~h6，字級可以參考 
+      a(href="http://modularscale.com/" target="_blank") modulare scale 
+      |，注意是”參考”，不是完全依照網頁的規則。
+    pre.code-box
+      code
+        span.c // *************************************
+        span.c //
+        span.c //   Base
+        span.c //   -> Tag-level settings
+        span.c //
+        span.c // *************************************
+        span.c 
+        span.n html 
+          span.p {
+        span.nt   height: 
+          span.nv 100%;
+        span.p } 
+        span.n body 
+          span.p {
+        span.nt   min-height: 
+          span.nv 100%;
+        span.nt   font-family: 
+          span.nv "Helvetica Neue", Helvetica, Arial, sans-serif; 
+        span.nt   font-weight: 
+          span.nv 300;
+        span.nt   ...
+        span.p }
+        span.c 
+        span.c // -------------------------------------
+        span.c //   Block Element
+        span.c // -------------------------------------
+        span.c 
+        span.n %h1, h1 
+          span.p {
+        span.nt   @include 
+          span.nv adjust-font-size-to(34px, 2);
+        span.p }
+        span.n %h2, h2 
+          span.p {
+        span.nt   @include 
+          span.nv adjust-font-size-to(27px, 1.5);
+        span.p }
+        span.n %h3, h3 
+          span.p {
+        span.nt   @include 
+          span.nv adjust-font-size-to(21px, 1.25);
+        span.p }
+        span.n %h4, h4 
+          span.p {
+        span.nt   @include 
+          span.nv adjust-font-size-to(16px);
+        span.p }
+        span.n %h5, h5 
+          span.p {
+        span.nt   @include 
+          span.nv adjust-font-size-to(13px);
+        span.p }
+        span.n %h6, h6 
+          span.p {
+        span.nt   @include 
+          span.nv adjust-font-size-to(10px, .875);
+        span.p }
+        span.n p, li 
+          span.p {
+        span.nt   @include 
+          span.nv adjust-font-size-to(13px);
+        span.p }    
+        span.c 
+        span.c // -------------------------------------
+        span.c //   inline Element
+        span.c // -------------------------------------
+        span.c 
+        span.n a {
+        span.nt   @include 
+          span.nv link-colors($c-link, $c-link-hover);
+        span.nt   text-decoration: 
+          span.nv none;
+        span.nt   -webkit-tap-highlight-color: 
+          span.nv rgba(0, 0, 0, .2);
+        span.p }

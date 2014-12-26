@@ -1,0 +1,69 @@
+extends basic
+
+block head
+  title Tools
+
+block title
+  h2.fn-title Tools
+
+block nav
+  - var currentUrl = "/base-group/tools.html"
+  include l-module/nav
+
+block content
+  article.article-box
+    p 設定產品／專案通用的元件，依照不同的需求去撰寫。
+    pre.code-box
+      code
+        span.c // -------------------------------------
+        span.c //   clearfix
+        span.c // -------------------------------------
+        span.c 
+        span.n .group:before, .group:after 
+          span.p {
+        span.nt   content: 
+          span.nv "";
+        span.nt   display: 
+          span.nv table;
+        span.p }
+        span.n .group:after 
+          span.p {
+        span.nt   clear: 
+          span.nv both;
+        span.p }
+        span.n .group 
+          span.p {
+        span.nt   zoom: 
+          span.nv 1; 
+          span.c-end // IE6&7
+        span.c }
+        span.c 
+        span.c // -------------------------------------
+        span.c //   position
+        span.c // -------------------------------------
+        span.c 
+        span.n .set-l 
+          span.p {
+        span.nt   float: 
+          span.nv left;
+        span.p }
+        span.n .set-r 
+          span.p {
+        span.nt   float: 
+          span.nv right;
+        span.p }
+        span.c 
+        span.c // -------------------------------------
+        span.c //   position
+        span.c // -------------------------------------
+        span.c 
+        span.n .is-hide 
+          span.p {
+        span.nt   display: 
+          span.nv none;
+        span.p }
+        span.n .is-show 
+          span.p {
+        span.nt   display: 
+          span.nv block;
+        span.p }

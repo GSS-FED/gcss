@@ -1,0 +1,22 @@
+.info-box
+  h2.logo GCSS
+ul.nav
+  li.nav-item
+    a.nav-link(class={"is-active": currentUrl === "index"} href="index.html") 概觀
+  li.nav-item
+    a.nav-link(href="style-guide.html") Style guide
+  li.nav-item
+    a.nav-link(href="file-array.html") 檔案結構
+  li.nav-item.has-child
+    a.nav-link(href="base-group.html") Base 組成
+    ul.sub-nav.is-show
+      li.nav-item
+        a.nav-link(href="base-group/reset.html") reset
+      li.nav-item
+        a.nav-link(href="base-group/variables.html") variables
+      li.nav-item
+        a.nav-link(href="base-group/mixin.html") mixin
+      li.nav-item
+        a.nav-link(href="base-group/tools.html") tools
+      li.nav-item
+        a.nav-link(href="base-group/base.html") base

@@ -1,0 +1,16 @@
+extends basic
+
+block head
+  title Mixin
+
+block title
+  h2.fn-title Mixin
+
+block nav
+  - var currentUrl = "/base-group/mixin.html"
+  include l-module/nav
+
+block content
+  article.article-box
+    p 撰寫時會使用 mixin、extend 以及 animations 的 @keyframes 來減少程式碼的長度。
+   

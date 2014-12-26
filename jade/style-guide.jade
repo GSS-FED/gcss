@@ -1,0 +1,211 @@
+extends basic
+
+block head
+  title Style Guide
+
+block title
+  h2.fn-title Style Guide
+block nav
+  - var currentUrl = "style-guide.html"
+  include l-module/nav
+
+block content
+  article.article-box
+    p 為了建立團隊彼此的默契，並定要制定一些規範來約束，使彼的溝通時間減少，默契增加。
+    h3.arti-title coding style
+    ul.arti-list
+      li.list-item 使用 soft tab，2 space 來縮排。
+      li.list-item 大括號 { 前面要有空白。
+        ul.sub-arti-list
+          li.list-item 正確 .classname { 
+          li.list-item 錯誤 .classname{
+      li.list-item 冒號 : 後面要有空白。
+        ul.sub-arti-list
+          li.list-item 正確 color: #333;
+          li.list-item 錯誤 color:#333;
+      li.list-item 統一使用 - 符號做命名連接。
+      li.list-item 使用 // 做註解，不會被 compile 出來。
+      li.list-item 最外層的層級結束時，加上 // class-name end（如果有N行，底下有繼承的 class name）
+    pre.code-box
+      code
+        span.c // Good example
+        span.n .classname 
+          span.p {
+        span.n   .subclassname 
+          span.p {
+        span.nt     padding: 
+          span.nv 8px 10px;
+        span.nt     color: 
+          span.nv #333;
+        span.nt     background: 
+          span.nv rgba(0, 0, 0, .4);
+        span.n   
+          span.p }
+        span.n
+          span.p } 
+          span.c-end // classname end
+    h3.arti-title coding order
+    p mixin ＆ extend 看類型放在相對應位置，自定義的樣式 mixin 跟 extend 放在最前面。
+    ol.arti-list.order
+      li.list-item include mixin ＆ extend
+      li.list-item Position
+      li.list-item Box model
+      li.list-item Typographic
+      li.list-item Style
+      li.list-item other
+    h3.arti-title comment（取自 MVCSS）
+    pre.code-box
+      code
+        span.c // *************************************
+          |//
+          |//   LEVEL 1
+          |//   -> DESCRIPTION
+          |//
+          |// *************************************
+          |　
+          |// -------------------------------------
+          |//   LEVEL 2
+          |// -------------------------------------
+          |　
+          |// ----- LEVEL 3 ----- //
+          |　
+          |// LEVEL 4
+    h3.arti-title 命名說明
+    p 把常用到的命名名稱，直接定規則下來。
+    h4 前綴詞部分
+    ul.arti-list
+      li.list-item ap - application 使用於 layout。
+      li.list-item fn - function 表示功能。
+    h4 layout
+    ul.arti-list
+      li.list-item wrap - 最外包裝，定義於 body 之下，包覆全體內容。
+      li.list-item header - 標頭。
+      li.list-item nav - 導覽列。
+      li.list-item sub-nav - 次要導航。
+      li.list-item menu - 菜單有別於 nav，偏向有下拉的選單使用。
+      li.list-item side - 側邊欄。
+      li.list-item main - 用來裝主要內容。
+      li.list-item article - 文章部分。
+      li.list-item container - 容器、集結箱之意，主要包覆內容外框。
+      li.list-item box - 外容器，對某個內容加上外容器使用，用定義裡面變化。
+      li.list-item inner - 內包裝，外包裝反之定義。
+      li.list-item footer - 註腳。
+    h4 元件部分
+    ul.arti-list
+      li.list-item btn - 按鈕。
+      li.list-item tab - 分頁。
+      li.list-item fields - input, checkbox, radiobox …等。
+      li.list-item icon - 圖示
+      li.list-item notify - 提示窗
+    h4 工具部分
+    ul.arti-list
+      li.list-item toolbar - 工具列。
+      li.list-item tool-tip - 提示。
+    h4 搜尋
+    ul.arti-list
+      li.list-item search - 搜尋。
+      li.list-item search-input - 搜尋輸入。
+      li.list-item search-result - 搜尋結果。
+    h4 廣告
+    ul.arti-list
+      li.list-item banner -  廣告。
+    h4 版權資訊
+    ul.arti-list
+      li.list-item copyright - 版權所屬。
+    h3.arti-title 命名風格
+    p 每個人命名的方式，往往會造成合作上的困難，所以制定一套規則，會讓事情簡單很多。
+    h4 開頭縮寫表示
+    p 用英文縮寫來更簡潔的描述 class 的命名，以及分類。
+    pre.code-box
+      code
+        span.c // -------------------------------------
+          |//   layout setting
+          |// -------------------------------------
+          |  
+        span.n .ap-header 
+          span.p { 
+          span.nv … 
+          span.p }
+        span.n .ap-main 
+          span.p { 
+          span.nv … 
+          span.p }
+        span.n .ap-side 
+          span.p { 
+          span.nv … 
+          span.p }
+        span.n .ap-footer 
+          span.p { 
+          span.nv … 
+          span.p }
+        span.c   
+          |// -------------------------------------
+          |//   function setting
+          |// -------------------------------------
+          |  
+        span.n .fn-head 
+          span.p { 
+          span.nv … 
+          span.p }
+        span.n .fn-tool 
+          span.p { 
+          span.nv … 
+          span.p }
+        span.n .fn-title 
+          span.p { 
+          span.nv … 
+          span.p }
+    p 以及常用的命名縮寫 button, column, grid…等。
+    pre.code-box
+      code
+        span.n .btn-xxx 
+          span.p { 
+          span.nv … 
+          span.p }
+        span.n .col-xxx 
+          span.p { 
+          span.nv … 
+          span.p }
+        span.n .g-xxx 
+          span.p { 
+          span.nv … 
+          span.p }
+    h4 結尾縮寫表示
+    p 我們會對尺寸做縮寫，並用一個 - 做連結。
+    pre.code-box
+      code
+        span.c // size setting
+        span.n -xs (extra small)
+        span.n -s  (small)
+        span.n -m  (medium)
+        span.n -l  (large)
+        span.n -xl (extra large)
+    h3.arti-title 狀態
+    p 動詞命名，由 js 觸發的動作，使用 is-接動詞。
+    pre.code-box
+      code
+        span.n .is-active
+        span.n .is-show
+        span.n .is-hide
+    p 如果要定義不同狀態的 is-xxx 就把要變更狀態的 class 後面加上 is-xxx。
+    pre.code-box
+      code
+        span.n .btn-primary.is-active 
+          span.p { 
+          span.nv … 
+          span.p }
+        span.n .tab-item.is-active 
+          span.p { 
+          span.nv … 
+          span.p }
+    p 出現跟消失用 show 跟 hide 不要用 in 跟 out，以免照成語意上的混淆。
+    h3.arti-title 圖像
+    p  圖像命名的方式
+    h4 把縮寫至於後方
+    ul.arti-list
+      li.list-item xxx-bg 用於背景
+      li.list-item xxx-logo 用於 logo
+      li.list-item xxx-img 用於內容圖像
+    h4 但是 icon 是例外，icon 的命名如下。
+    ul.arti-list
+      li.list-item picon-xxx 用於 icon

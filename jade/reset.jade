@@ -1,0 +1,19 @@
+extends basic
+
+block head
+  title Reset
+
+block title
+  h2.fn-title Reset
+
+block nav
+  - var currentUrl = "/base-group/reset.html"
+  include l-module/nav
+
+block content
+  article.article-box
+    p 我們採用 
+      a(href="http://html5doctor.com/html-5-reset-stylesheet/", target="_blank") html5doctor 
+      |的版本為基礎，在客製成所需的 CSS reset，並放上 
+      a(href="https://github.com/GSS-CSID/css-reset", target="_blank") github
+      |。

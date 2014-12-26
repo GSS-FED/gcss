@@ -1,0 +1,36 @@
+// -------------------------------------
+//   clearfix
+// -------------------------------------
+
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; // IE6&7
+}
+
+// -------------------------------------
+//   position
+// -------------------------------------
+
+.set-l {
+  float: left;
+}
+.set-r {
+  float: right;
+}
+
+// -------------------------------------
+//   position
+// -------------------------------------
+
+.is-hide {
+  display: none;
+}
+.is-show {
+  display: block;
+}

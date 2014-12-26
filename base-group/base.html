@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- mobile use-->
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <!-- mobile use end-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>base</title>
+    <link href="css/basic.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/action.js"></script>
+  </head>
+  <body class="gcss">
+    <!-- ap-wrap-->
+    <div class="ap-wrap">
+      <!-- ap-nav-->
+      <nav class="ap-nav">
+        <div class="info-box">
+          <h2 class="logo">GCSS</h2>
+        </div>
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html" class="nav-link [object Object]">概觀</a></li>
+          <li class="nav-item"><a href="style-guide.html" class="nav-link">Style guide</a></li>
+          <li class="nav-item"><a href="file-array.html" class="nav-link">檔案結構</a></li>
+          <li class="nav-item has-child"><a href="base-group.html" class="nav-link">Base 組成</a>
+            <ul class="sub-nav is-show">
+              <li class="nav-item"><a href="base-group/reset.html" class="nav-link">reset</a></li>
+              <li class="nav-item"><a href="base-group/variables.html" class="nav-link">variables</a></li>
+              <li class="nav-item"><a href="base-group/mixin.html" class="nav-link">mixin</a></li>
+              <li class="nav-item"><a href="base-group/tools.html" class="nav-link">tools</a></li>
+              <li class="nav-item"><a href="base-group/base.html" class="nav-link">base</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- ap-nav end-->
+      <!-- ap-header-->
+      <header class="ap-header">
+        <div class="header-box removeTextNodes"><a class="nav-ctrl"><span class="icon-brug"></span></a>
+          <h1 class="fn-title">Base</h1>
+        </div>
+      </header>
+      <!-- ap-header end-->
+      <!-- ap-main-->
+      <main class="ap-main">
+        <div class="fn-body">
+          <article class="article-box">
+            <p>針對 HTML 的元素以及基本文字字級的設定。先定義基本的 h1\~h6，字級可以參考 <a href="http://modularscale.com/" target="_blank">modulare scale </a>，注意是”參考”，不是完全依照網頁的規則。</p>
+            <pre class="code-box"><code><span class="c">// *************************************</span><span class="c">//</span><span class="c">//   Base</span><span class="c">//   -> Tag-level settings</span><span class="c">//</span><span class="c">// *************************************</span><span class="c"> </span><span class="n">html <span class="p">{</span></span><span class="nt">  height: <span class="nv">100%;</span></span><span class="p">} </span><span class="n">body <span class="p">{</span></span><span class="nt">  min-height: <span class="nv">100%;</span></span><span class="nt">  font-family: <span class="nv">"Helvetica Neue", Helvetica, Arial, sans-serif; </span></span><span class="nt">  font-weight: <span class="nv">300;</span></span><span class="nt">  ...</span><span class="p">}</span><span class="c"> </span><span class="c">// -------------------------------------</span><span class="c">//   Block Element</span><span class="c">// -------------------------------------</span><span class="c"> </span><span class="n">%h1, h1 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(34px, 2);</span></span><span class="p">}</span><span class="n">%h2, h2 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(27px, 1.5);</span></span><span class="p">}</span><span class="n">%h3, h3 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(21px, 1.25);</span></span><span class="p">}</span><span class="n">%h4, h4 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(16px);</span></span><span class="p">}</span><span class="n">%h5, h5 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(13px);</span></span><span class="p">}</span><span class="n">%h6, h6 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(10px, .875);</span></span><span class="p">}</span><span class="n">p, li <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(13px);</span></span><span class="p">}    </span><span class="c"> </span><span class="c">// -------------------------------------</span><span class="c">//   inline Element</span><span class="c">// -------------------------------------</span><span class="c"> </span><span class="n">a {</span><span class="nt">  @include <span class="nv">link-colors($c-link, $c-link-hover);</span></span><span class="nt">  text-decoration: <span class="nv">none;</span></span><span class="nt">  -webkit-tap-highlight-color: <span class="nv">rgba(0, 0, 0, .2);</span></span><span class="p">}</span></code></pre>
+          </article>
+        </div>
+      </main>
+      <!-- ap-main end-->
+    </div>
+    <!-- ap-wrap end-->
+  </body>
+</html>

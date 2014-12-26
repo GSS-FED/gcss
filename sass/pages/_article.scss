@@ -1,0 +1,108 @@
+.article-box {
+  margin-bottom: 38px;
+  padding: 65px 90px;
+  .arti-title {
+     @include adjust-font-size-to(27px, 1.5);
+     @include trailer(1);
+     color: $c-gray;
+     border-bottom: 2px solid lighten($c-gray-light, 30);
+  }
+  h4 {
+    color: $c-gray;
+    @include trailer(.25);
+  }
+  p {
+    @extend %arti-text;
+    @include trailer(1);
+  }
+  p:last-child {
+    margin: 0;
+  }
+  .arti-list {
+    @include trailer(1);
+    .list-item {
+      @extend %arti-text;
+      @include trailer(.3);
+      position: relative;
+      padding-left: 15px;
+      &:before {
+        content: "●";
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        font-size: $font-size-s;
+        vertical-align: middle;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &.order {
+      .list-item {
+        padding-left: 0;
+        list-style: decimal inside;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+  .sub-arti-list {
+    padding-left: 3px;
+    .list-item {
+      @extend %arti-text;
+      @include trailer(0);
+      position: relative;
+      padding-left: 15px;
+      &:before {
+        content: "○";
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        font-size: $font-size-s;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  // code use
+  pre.code-box {
+    overflow: auto;
+    margin-bottom: 24px;
+    padding: 38px 40px;
+    font-size: 15px;
+    line-height: 1.7;
+    background: #fff;
+    @include border-radius($border-radius);
+  }
+  code {
+    font-family: "Source Code Pro";    
+    .c, .n, .nt, .t {
+      display: block;
+    }
+    .n {
+      color: darken($c-primary, 10);
+    }
+    .nt, .nv {
+      font-weight: 600;
+    }
+    .nt {
+      color: darken($c-info, 15);
+    }
+    .nv {
+      color: $c-inverse;
+    }
+    .p {
+      color: $c-gray-dark;
+    }
+    .c, .c-end {
+      color: lighten($c-gray, 10);
+    }
+    .c-end {
+      display: inline;
+    }
+    .t {
+      color: $c-inverse;
+    }
+  }
+} // article-box end

@@ -1,0 +1,89 @@
+// *************************************
+//
+//   layout
+//   -> most layout
+//
+// *************************************
+
+// -------------------------------------
+//   layout setting
+// -------------------------------------
+
+.ap-wrap {
+  overflow: hidden;
+  height: 100%;
+}
+
+// ----- header ----- //
+
+.ap-header {
+   position: relative;
+   z-index: 99;
+   height: 50px;
+   text-align: left;
+   background: #fff;
+   &:before {
+     content: "";
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     display: block;
+     height: 4px;
+     background-color: $c-primary;
+   }
+  //  &:after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: -10px;
+  //   display: block;
+  //   height: 10px;
+  //   @include background(linear-gradient(top, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, 0) 100%));
+  // }  
+}
+
+// ----- nav ----- //
+
+.ap-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: z("fix");
+  overflow: auto;
+  width: 180px;
+  background: $c-nav-bg;
+  text-align: left;
+  @include transition(transform 600ms cubic-bezier(0.86, 0, 0.07, 1));
+  &.is-show {
+    @include translate3d(0, 0, 0);
+  }
+}
+
+// ----- main ----- //
+
+.ap-main {
+  overflow: auto;
+  height: 100%;
+  margin-left: 180px;
+  @include transition(margin 600ms cubic-bezier(0.86, 0, 0.07, 1));
+  .is-nav-open & {
+    margin-left: 180px;
+  }
+}
+
+// ----- media query ----- //
+
+@media (max-width: 768px) {
+  // ----- nav ----- //
+  .ap-nav {
+    @include translate3d(-180px, 0, 0)
+  }
+
+  // ----- main ----- //
+  .ap-main {
+    margin-left: 0px;
+  }
+}

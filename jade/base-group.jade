@@ -1,0 +1,22 @@
+extends basic
+
+block head
+  title Base 構成
+
+block title
+  h1.fn-title Base 構成
+
+block nav
+  - var currentUrl = "base-group.html"
+  include l-module/nav
+
+block content
+  article.article-box
+    h3.arti-title SCSS 檔案結構
+    p 專案／產品中所需的基本樣式。為你的專案／產品提供初始設置。
+    h4 由以下檔案組成：
+    ul.arti-list
+      li.list-item reset
+      li.list-item variables
+      li.list-item mixin
+      li.list-item base

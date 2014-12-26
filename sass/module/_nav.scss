@@ -1,0 +1,139 @@
+// -------------------------------------
+//   infonation
+// -------------------------------------
+
+.info-box {
+  position: relative;
+  height: 50px;
+  @include background(linear-gradient(top, $c-decor-light 0, $c-decor-dark 100%));
+  // border-bottom: 4px solid $c-brand;
+   &:before {
+     content: "";
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     display: block;
+     height: 4px;
+     background: $c-brand;
+   }  
+  .logo {
+    @extend %h1;
+    float: left;
+    margin: 0 0 0 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    color: lighten($c-brand, 8);
+    }
+  .version {
+    @include link-colors($c-primary, lighten($c-primary, 10%));
+    [class^="icon-"] {
+      @include inline-block;
+      margin: 2px 0 0 5px;
+    }
+  }
+} // info-box end
+
+// -------------------------------------
+//   nav
+// -------------------------------------
+
+.nav-ctrl {
+  display: none;
+  padding: 22px 20px;
+  cursor: pointer;
+  vertical-align: middle;
+  .icon-brug {
+    position: relative;
+    display: block;
+    height: 3px;
+    width: 18px;
+    background: $c-gray-light;
+    @include transition(all 200ms ease-in-out);
+    @include border-radius(1px);
+    &:before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      height: 3px;
+      width: 18px;
+      background: $c-gray-light;
+      @include transition(all 200ms ease-in-out);
+      @include border-radius(1px);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      height: 3px;
+      width: 18px;
+      background: $c-gray-light;
+      @include transition(all 200ms ease-in-out);
+      @include border-radius(1px);
+    }
+  }
+  &.is-active {
+    .icon-brug {
+      background: transparent;
+      &:before {
+        top: 0;
+        @include transform3d(rotate(45deg));
+        @include border-radius(1px);
+      }
+      &:after {
+        top: 0;
+        @include transform3d(rotate(-45deg));
+        @include border-radius(1px);
+      }
+    }    
+  }
+}
+@media (max-width: 768px) {
+  .nav-ctrl {
+    display: inline-block;
+  } 
+}
+
+.nav {
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 10px;
+    @include background(linear-gradient(right, rgba(0, 0, 0, .33) 0, rgba(0, 0, 0, 0) 100%));
+  }
+  .nav-item {}
+  .nav-link {
+    display: block;
+    padding: 15px 20px;
+    font-size: $font-size;
+    color: $c-text-inverse;
+    &:hover{
+      color: lighten($c-text-inverse, 20%);
+      background: #575c66;
+    }
+    &.is-active {
+      color: lighten($c-text-inverse, 20%);
+      background: darken($c-nav-bg, 11);
+    }
+  }
+} // nav end
+.sub-nav {
+  overflow: hidden;
+  height: 0;
+  background: darken($c-nav-bg, 5);
+  @include transition(all 600ms ceaser(0.215, 0.610, 0.355, 1.000));
+  .nav-link {
+    display: block;
+    padding: 15px 20px 15px 40px;
+    font-size: $font-size;
+    color: $c-text-inverse;
+  }
+  &.is-show {
+    height: 100%;
+    @include transition(all 600ms ceaser(0.215, 0.610, 0.355, 1.000));
+  }
+} // subnav end
