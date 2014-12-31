@@ -20,6 +20,31 @@
 //   mixin
 // -------------------------------------
 
+// ----- media queries ----- //
+@mixin bp($point) {
+  $bp-pad: "(max-width: 1024px)";
+  $bp-pad-v: "(max-width: 768px)";
+  $bp-small-table: "(max-width: 800px)";
+  $bp-mobile: "(max-width: 568px)";
+  $bp-mobile-v: "(max-width: 375px)";
+
+  @if $point == pad {
+    @media #{$bp-pad} { @content; }
+  }
+  @else if $point == pad-v {
+    @media #{$bp-pad-v} { @content; }
+  }
+  @else if $point == table-s {
+    @media #{$bp-small-table} { @content; }
+  }
+  @else if $point == mobile {
+    @media #{$bp-mobile}  { @content; }
+  }
+  @else if $point == mobile-v {
+    @media #{$bp-mobile-v}  { @content; }
+  }
+}
+
 // -------------------------------------
 //   function
 // -------------------------------------

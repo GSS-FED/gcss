@@ -18,3 +18,7 @@ $(document).ready(function(){
     return this.nodeType === 3;
   }).remove();
 });
+
+// $(window).load(function() {
+//   alert('123');
+// });

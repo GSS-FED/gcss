@@ -32,16 +32,16 @@
      height: 4px;
      background-color: $c-primary;
    }
-  //  &:after {
-  //   content: "";
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: -10px;
-  //   display: block;
-  //   height: 10px;
-  //   @include background(linear-gradient(top, rgba(0, 0, 0, .2) 0, rgba(0, 0, 0, 0) 100%));
-  // }  
+   &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    display: block;
+    height: 4px;
+    @include background(linear-gradient(top, rgba(0, 0, 0, .18) 0, rgba(0, 0, 0, 0) 100%));
+  }  
 }
 
 // ----- nav ----- //
@@ -76,7 +76,7 @@
 
 // ----- media query ----- //
 
-@media (max-width: 768px) {
+@include bp(table-s) {
   // ----- nav ----- //
   .ap-nav {
     @include translate3d(-180px, 0, 0)

@@ -1,11 +1,12 @@
 .article-box {
-  margin-bottom: 38px;
+  margin-bottom: 0;
   padding: 65px 90px;
   .arti-title {
-     @include adjust-font-size-to(27px, 1.5);
+     @extend %h2;
+     line-height: 1.7;
      @include trailer(1);
      color: $c-gray;
-     border-bottom: 2px solid lighten($c-gray-light, 30);
+     border-bottom: 2px solid $c-gray-light;
   }
   h4 {
     color: $c-gray;
@@ -64,45 +65,69 @@
       }
     }
   }
-
-  // code use
-  pre.code-box {
-    overflow: auto;
-    margin-bottom: 24px;
-    padding: 38px 40px;
-    font-size: 15px;
-    line-height: 1.7;
-    background: #fff;
-    @include border-radius($border-radius);
-  }
-  code {
-    font-family: "Source Code Pro";    
-    .c, .n, .nt, .t {
-      display: block;
-    }
-    .n {
-      color: darken($c-primary, 10);
-    }
-    .nt, .nv {
-      font-weight: 600;
-    }
-    .nt {
-      color: darken($c-info, 15);
-    }
-    .nv {
-      color: $c-inverse;
-    }
-    .p {
-      color: $c-gray-dark;
-    }
-    .c, .c-end {
-      color: lighten($c-gray, 10);
-    }
-    .c-end {
-      display: inline;
-    }
-    .t {
-      color: $c-inverse;
-    }
-  }
 } // article-box end
+
+// code use
+.code-box {
+  overflow: auto;
+  margin-bottom: 24px;
+  padding: 38px 40px;
+  font-size: 15px;
+  line-height: 1.7;
+  @include border-radius($border-radius);
+  @include background(
+    linear-gradient(left, #fff 70%, rgba(0, 0, 0, 0)),
+    linear-gradient(right, #fff 70%, rgba(0, 0, 0, 0)) 100% 0,
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, .45), rgba(0, 0, 0, 0)), 
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, .45), rgba(0, 0, 0, 0)) 100% 0);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 50px 100%, 50px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+code {
+  font-family: "Source Code Pro";    
+  .c, .n, .nt, .t {
+    display: block;
+  }
+  .n {
+    color: darken($c-primary, 10);
+  }
+  .nt, .nv {
+    font-weight: 600;
+  }
+  .nt {
+    color: darken($c-info, 15);
+  }
+  .nv {
+    color: $c-inverse;
+  }
+  .p {
+    color: $c-gray-dark;
+  }
+  .c, .c-end {
+    color: lighten($c-gray, 10);
+  }
+  .c-end {
+    display: inline;
+  }
+  .t {
+    color: $c-inverse;
+  }
+}
+
+@include bp(pad) {
+  .article-box {
+    padding: 35px 58px;
+  }
+}
+// @include bp(table-s) {
+//   .article-box {
+//     padding: 35px 58px;
+//   }
+// }
+@include bp(mobile) {
+  .article-box {
+    padding: 12px 20px;
+  }
+}

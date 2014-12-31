@@ -7,16 +7,19 @@
   height: 50px;
   @include background(linear-gradient(top, $c-decor-light 0, $c-decor-dark 100%));
   // border-bottom: 4px solid $c-brand;
-   &:before {
-     content: "";
-     position: absolute;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     display: block;
-     height: 4px;
-     background: $c-brand;
-   }  
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    height: 4px;
+    background: $c-brand;
+  }
+  .info-link {
+    display: block;
+  }
   .logo {
     @extend %h1;
     float: left;
@@ -24,7 +27,8 @@
     font-family: 'Raleway', sans-serif;
     font-size: 36px;
     color: lighten($c-brand, 8);
-    }
+    @include opacity(1);
+  }
   .version {
     @include link-colors($c-primary, lighten($c-primary, 10%));
     [class^="icon-"] {
@@ -88,7 +92,7 @@
     }    
   }
 }
-@media (max-width: 768px) {
+@include bp(table-s) {
   .nav-ctrl {
     display: inline-block;
   } 

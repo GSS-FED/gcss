@@ -30,8 +30,8 @@ $c-text:            $c-gray-dark !default;
 $c-text-inverse:    invert($c-gray-dark) !default;
 $c-decor-light:     #243B59 !default;
 $c-decor-dark:      #2d3540 !default;
-$c-border-color:    darken($c-gray-lighter, 10%); // #d4d4d4
-$c-main-bg:         darken($c-gray-lighter, 3%) !default;
+$c-border-color:    darken($c-gray-lighter, 5%)!default;
+$c-main-bg:         $c-gray-lighter !default;
 $c-nav-bg:          #38414D !default;
 
 // ----- link ----- //
