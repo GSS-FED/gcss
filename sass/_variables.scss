@@ -72,6 +72,7 @@ $box-shadow:        0 2px 5px rgba($c-gray-darker, .25) !default;
 $z-layers: (
   "popup":          9000,
   "fix":            100,
+  "head":           99,
   "default":        1,
   "below":          -1,
   "hidden":         -9000

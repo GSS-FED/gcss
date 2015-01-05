@@ -18,7 +18,7 @@
 
 .ap-header {
    position: relative;
-   z-index: 99;
+   z-index: z("head");
    height: 50px;
    text-align: left;
    background: #fff;
@@ -68,22 +68,32 @@
   overflow: auto;
   height: 100%;
   margin-left: 180px;
-  @include transition(margin 600ms cubic-bezier(0.86, 0, 0.07, 1));
+  @include translate3d(0, 0, 0);
+  @include transition(transform 600ms cubic-bezier(0.86, 0, 0.07, 1));
   .is-nav-open & {
-    margin-left: 180px;
+    @include translate3d(180px, 0, 0);
   }
 }
 
-// ----- media query ----- //
+// ----- footer ----- //
+
+.ap-footer {
+  position: relative;
+}
+
+// -------------------------------------
+//   media query
+// -------------------------------------
 
 @include bp(table-s) {
   // ----- nav ----- //
   .ap-nav {
-    @include translate3d(-180px, 0, 0)
+    @include translate3d(-180px, 0, 0);
   }
 
   // ----- main ----- //
   .ap-main {
-    margin-left: 0px;
+    margin-left: 0;
+    @include translate3d(0, 0, 0);
   }
 }
