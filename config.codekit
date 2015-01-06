@@ -215,7 +215,7 @@
 	"\/jade\/sub-basic.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/sub-basic.jade",
 		"outputAbbreviatedPath": "\/sub-basic.html",
