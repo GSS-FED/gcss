@@ -10,7 +10,7 @@ ul.nav
     a.nav-link(class={"is-active": currentUrl === "file-array"} href="#{baseUrl}/file-array.html") 檔案結構
   li.nav-item.has-child
     a.nav-link(class={"is-active": currentUrl === "base-group"} href="#{baseUrl}/base-group.html") Base 組成
-    ul.sub-nav
+    ul.sub-nav(class={"is-show": currentUrl === "base-group"})
       li.nav-item
         a.nav-link(class={"is-active": currentUrl === "reset"} href="#{baseUrl}/base-group/reset.html") reset
       li.nav-item
