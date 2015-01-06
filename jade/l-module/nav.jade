@@ -12,12 +12,12 @@ ul.nav
     a.nav-link(class={"is-active": currentUrl === "base-group"} href="#{baseUrl}/base-group.html") Base 組成
     ul.sub-nav(class={"is-show": currentUrl === "base-group"})
       li.nav-item
-        a.nav-link(class={"is-active": currentUrl === "reset"} href="#{baseUrl}/base-group/reset.html") reset
+        a.nav-link(class={"is-active": subCurrentUrl === "reset"} href="#{baseUrl}/base-group/reset.html") reset
       li.nav-item
-        a.nav-link(class={"is-active": currentUrl === "variables"} href="#{baseUrl}/base-group/variables.html") variables
+        a.nav-link(class={"is-active": subCurrentUrl === "variables"} href="#{baseUrl}/base-group/variables.html") variables
       li.nav-item
-        a.nav-link(class={"is-active": currentUrl === "mixin"} href="#{baseUrl}/base-group/mixin.html") mixin
+        a.nav-link(class={"is-active": subCurrentUrl === "mixin"} href="#{baseUrl}/base-group/mixin.html") mixin
       li.nav-item
-        a.nav-link(class={"is-active": currentUrl === "tools"} href="#{baseUrl}/base-group/tools.html") tools
+        a.nav-link(class={"is-active": subCurrentUrl === "tools"} href="#{baseUrl}/base-group/tools.html") tools
       li.nav-item
-        a.nav-link(class={"is-active": currentUrl === "base"} href="#{baseUrl}/base-group/base.html") base
+        a.nav-link(class={"is-active": subCurrentUrl === "base"} href="#{baseUrl}/base-group/base.html") base
