@@ -84,6 +84,7 @@
   background-repeat: no-repeat;
   background-size: 50px 100%, 50px 100%, 10px 100%, 10px 100%;
   background-attachment: local, local, scroll, scroll;
+  @include box-shadow(3px 0px 0px rgba(0, 0, 0, .3));
 }
 code {
   font-family: "Source Code Pro";    
