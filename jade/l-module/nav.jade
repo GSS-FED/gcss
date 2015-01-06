@@ -3,21 +3,21 @@
     h2.logo GCSS
 ul.nav
   li.nav-item
-    a.nav-link(class={"is-active": currentUrl === "index"} href="../index.html") 概觀
+    a.nav-link(class={"is-active": currentUrl === "index"} href="#{baseUrl}/index.html") 概觀
   li.nav-item
-    a.nav-link(href="../style-guide.html") Style guide
+    a.nav-link(class={"is-active": currentUrl === "style-guide"} href="#{baseUrl}/style-guide.html") Style guide
   li.nav-item
-    a.nav-link(href="../file-array.html") 檔案結構
+    a.nav-link(class={"is-active": currentUrl === "file-array"} href="#{baseUrl}/file-array.html") 檔案結構
   li.nav-item.has-child
-    a.nav-link(href="../base-group.html") Base 組成
+    a.nav-link(class={"is-active": currentUrl === "base-group"} href="#{baseUrl}/base-group.html") Base 組成
     ul.sub-nav.is-show
       li.nav-item
-        a.nav-link(href="../base-group/reset.html") reset
+        a.nav-link(class={"is-active": currentUrl === "reset"} href="#{baseUrl}/base-group/reset.html") reset
       li.nav-item
-        a.nav-link(href="../base-group/variables.html") variables
+        a.nav-link(class={"is-active": currentUrl === "variables"} href="#{baseUrl}/base-group/variables.html") variables
       li.nav-item
-        a.nav-link(href="../base-group/mixin.html") mixin
+        a.nav-link(class={"is-active": currentUrl === "mixin"} href="#{baseUrl}/base-group/mixin.html") mixin
       li.nav-item
-        a.nav-link(href="../base-group/tools.html") tools
+        a.nav-link(class={"is-active": currentUrl === "tools"} href="#{baseUrl}/base-group/tools.html") tools
       li.nav-item
-        a.nav-link(href="../base-group/base.html") base
+        a.nav-link(class={"is-active": currentUrl === "base"} href="#{baseUrl}/base-group/base.html") base
