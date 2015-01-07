@@ -36,16 +36,17 @@ html
       main.ap-main
         .fn-body
           block content
-          .page-box
-            ul.page.removeTextNodes
-              li.page-item
-                a.p-link(href="###") 
-                  span.p-tip 上一頁
-                  span.p-cont 內容內容內容
-              li.page-item
-                a.p-link(href="###") 
-                  span.p-tip 下一頁
-                  span.p-cont 內容內容
+          .page-box.group
+            .page-l
+              a.p-link(href="###") 
+                span 上一頁
+                span.p-tip
+                  block p-pre
+            .page-r
+              a.p-link(href="###") 
+                span 下一頁
+                span.p-tip
+                  block p-next
       // ap-main end
     // ap-wrap end
 

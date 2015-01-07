@@ -5,21 +5,33 @@
 //
 // *************************************
 
-.page-box {}
-.page {
-  text-align: center;
+.page-box {
+  padding: 0 47px;
+  width: 100%;
+  height: 60px;
+  background-color: #ccc;
+  @include box-sizing(border-box);
 }
-.page-item {
+.page-r, .page-l {
   width: 50%;
-  @include inline-block();
+  height: 100%;
+  background-color: #ccc;
+}
+.page-l {
+  float: left;
+  text-align: left;
+}
+.page-r {
+  float: right;
+  text-align: right;
 }
 .p-link {
   display: block;
-  background-color: #ccc;
+  padding-top: 12px;
+  font-size: 13px;
 }
 .p-tip {
   display: block;
-}
-.p-cont {
-  display: block;
+  font-size: 18px;
+  line-height: 1.6;
 }
