@@ -7078,6 +7078,7 @@ a:hover {
 
 .ap-wrap {
   overflow: auto;
+  padding-top: 50px;
   height: 100%;
 }
 
