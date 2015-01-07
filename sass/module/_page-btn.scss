@@ -1,0 +1,25 @@
+// *************************************
+//
+//   page-btn
+//   -> page use
+//
+// *************************************
+
+.page-box {}
+.page {
+  text-align: center;
+}
+.page-item {
+  width: 50%;
+  @include inline-block();
+}
+.p-link {
+  display: block;
+  background-color: #ccc;
+}
+.p-tip {
+  display: block;
+}
+.p-cont {
+  display: block;
+}

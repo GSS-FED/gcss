@@ -16,6 +16,7 @@ html
     script(src="#{baseUrl}/js/jquery-1.11.1.min.js")
     script(src="#{baseUrl}/js/action.js")
     block script
+    include dev/src
   body.gcss
     // ap-wrap
     .ap-wrap
@@ -35,11 +36,17 @@ html
       main.ap-main
         .fn-body
           block content
+          .page-box
+            ul.page.removeTextNodes
+              li.page-item
+                a.p-link(href="###") 
+                  span.p-tip 上一頁
+                  span.p-cont 內容內容內容
+              li.page-item
+                a.p-link(href="###") 
+                  span.p-tip 下一頁
+                  span.p-cont 內容內容
       // ap-main end
-      // ap-footer
-      footer.ap-footer
-        .page-box
-      // ap-footer end
     // ap-wrap end
 
     block script-bodyend
