@@ -7079,7 +7079,11 @@ a:hover {
 .p-link {
   display: block;
   padding-top: 12px;
+  height: 100%;
   font-size: 13px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .p-tip {

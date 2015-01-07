@@ -28,7 +28,9 @@
 .p-link {
   display: block;
   padding-top: 12px;
+  height: 100%;
   font-size: 13px;
+  @include box-sizing(border-box);
 }
 .p-tip {
   display: block;
