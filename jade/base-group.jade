@@ -20,3 +20,15 @@ block content
       li.list-item variables
       li.list-item mixin
       li.list-item base
+
+block pages
+  - var preLink = baseUrl + "/file-array.html"
+  - var nextLink = baseUrl + "/base-group/reset.html"
+  - var pre = {name: "上一頁"}
+  - var next = {name: "下一頁"}  
+
+block pre-tip
+  |檔案結構
+
+block next-tip
+  |reset

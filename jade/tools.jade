@@ -67,3 +67,15 @@ block content
         span.nt   display: 
           span.nv block;
         span.p }
+
+block pages
+  - var preLink = baseUrl + "/base-group/mixin.html"
+  - var nextLink = baseUrl + "/base-group/base.html"  
+  - var pre = {name: "上一頁"}
+  - var next = {name: "下一頁"}
+
+block p-pre
+  |mixin
+
+block p-next
+  |base

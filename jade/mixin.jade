@@ -13,4 +13,15 @@ block nav-var
 block content
   article.article-box
     p 撰寫時會使用 mixin、extend 以及 animations 的 @keyframes 來減少程式碼的長度。
-   
+
+block pages
+  - var preLink = baseUrl + "/base-group/variables.html"
+  - var nextLink = baseUrl + "/base-group/tools.html"  
+  - var pre = {name: "上一頁"}
+  - var next = {name: "下一頁"}
+
+block p-pre
+  |variables
+
+block p-next
+  |tools

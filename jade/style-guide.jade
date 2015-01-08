@@ -209,3 +209,15 @@ block content
     h4 但是 icon 是例外，icon 的命名如下。
     ul.arti-list
       li.list-item picon-xxx 用於 icon
+
+block pages
+  - var preLink = baseUrl + "/index.html"
+  - var nextLink = baseUrl + "/file-array.html"
+  - var pre = {name: "上一頁"}
+  - var next = {name: "下一頁"}
+  
+block pre-tip
+  |檔案結構
+
+block next-tip
+  |reset

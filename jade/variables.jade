@@ -106,3 +106,15 @@ block content
         span.t 
         span.n $box-shadow:       
           span.nv 0 2px 5px rgba($c-gray-darker, .25) !default;
+
+block pages
+  - var preLink = baseUrl + "/base-group/reset.html"
+  - var nextLink = baseUrl + "/base-group/mixin.html"  
+  - var pre = {name: "上一頁"}
+  - var next = {name: "下一頁"}
+
+block p-pre
+  |reset
+
+block p-next
+  |mixin
