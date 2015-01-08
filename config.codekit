@@ -149,7 +149,7 @@
 	"\/jade\/dev\/src.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/dev\/src.jade",
 		"outputAbbreviatedPath": "\/dev\/src.html",
