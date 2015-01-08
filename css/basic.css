@@ -7062,7 +7062,7 @@ a:hover {
 
 .page-r, .page-l {
   width: 50%;
-  background-color: #ccc;
+  height: 100%;
 }
 
 .page-l {
