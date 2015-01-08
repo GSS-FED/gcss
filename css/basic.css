@@ -117,10 +117,6 @@ ol, ul {
   clear: both;
 }
 
-.group {
-  zoom: 2;
-}
-
 .set-l {
   float: left;
 }
@@ -7063,6 +7059,7 @@ a:hover {
 .page-r, .page-l {
   width: 50%;
   height: 100%;
+  background-color: #ccc;
 }
 
 .page-l {
