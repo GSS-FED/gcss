@@ -9,6 +9,7 @@
   padding: 0 47px;
   width: 100%;
   height: 60px;
+  background: darken($c-gray-lighter, 4%);
   @include box-sizing(border-box);
 }
 .page-r, .page-l {
@@ -25,7 +26,7 @@
 }
 .p-link {
   display: block;
-  padding: 12px 15px 0;
+  padding: 16px 15px 0;
   height: 100%;
   font-size: 13px;
   @include box-sizing(border-box);
