@@ -7221,7 +7221,7 @@ a:hover {
 }
 .article-box {
   margin-bottom: 0;
-  padding: 65px 90px;
+  padding: 65px 90px 80px;
 }
 .article-box .arti-title {
   line-height: 1.7;
@@ -7344,12 +7344,12 @@ code .t {
 
 @media (max-width: 1024px) {
   .article-box {
-    padding: 35px 58px;
+    padding: 35px 58px 60px;
   }
 }
 @media (max-width: 568px) {
   .article-box {
-    padding: 12px 20px;
+    padding: 12px 20px 40px;
   }
 }
 
