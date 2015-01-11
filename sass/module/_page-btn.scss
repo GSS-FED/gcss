@@ -9,25 +9,23 @@
   padding: 0 47px;
   width: 100%;
   height: 60px;
-  background-color: #ccc;
   @include box-sizing(border-box);
 }
 .page-r, .page-l {
   width: 50%;
   height: 100%;
-  background-color: #ccc;
 }
 .page-l {
   float: left;
-  text-align: left;
+  text-align: right;
 }
 .page-r {
   float: right;
-  text-align: right;
+  text-align: left;
 }
 .p-link {
   display: block;
-  padding-top: 12px;
+  padding: 12px 15px 0;
   height: 100%;
   font-size: 13px;
   @include box-sizing(border-box);

@@ -1,12 +1,18 @@
 block  pages
 .page-box.group
-  .page-l
-    a.p-link(href="#{preLink}") 
-      span #{pre.name}
-      span.p-tip
-        block pre-tip
-  .page-r
-    a.p-link(href="#{nextLink}")
-      span #{next.name}
-      span.p-tip
-        block next-tip
+  if pageL
+    .page-l
+      a.p-link(href="#{preLink}") 
+        span #{pre.name}
+        span.p-tip
+          block pre-tip
+  else
+    .page-l
+  if pageR
+    .page-r
+      a.p-link(href="#{nextLink}")
+        span #{next.name}
+        span.p-tip
+          block next-tip
+  else
+    .page-r
