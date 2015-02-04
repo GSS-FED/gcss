@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".nav-ctrl").bind("click",function(){$(this).toggleClass("is-active"),$(".ap-wrap").toggleClass("is-nav-open"),$(".ap-nav").toggleClass("is-show")}),$(".removeTextNodes").contents().filter(function(){return 3===this.nodeType}).remove()});
+$(document).ready(function(){$(".nav-ctrl").on("click",function(){$(this).toggleClass("is-active"),$(".ap-wrap").toggleClass("is-nav-open"),$(".ap-nav").toggleClass("is-show")}),$(".removeTextNodes").contents().filter(function(){return 3===this.nodeType}).remove()});
