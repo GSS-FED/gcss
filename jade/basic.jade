@@ -13,9 +13,6 @@ html
     block head
     link(href="#{baseUrl}/css/basic.css",rel="stylesheet")
     block css
-    script(src="#{baseUrl}/js/jquery-1.11.1.min.js")
-    script(src="#{baseUrl}/js/action.js")
-    block script
     
     //- link(href="./css/basic.css",rel="stylesheet")
     //- script(src="./js/jquery-1.11.1.min.js")
@@ -44,3 +41,7 @@ html
     // ap-wrap end
 
     block script-bodyend
+
+    script(src="#{baseUrl}/js/jquery-1.11.1.min.js")
+    script(src="#{baseUrl}/js/action.js")
+    block script
