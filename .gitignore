@@ -23,6 +23,9 @@ Temporary Items
 ### Sass ###
 .sass-cache
 
+### Modules ###
+node_modules
+bower_components
 
 jade/dev
 dev
