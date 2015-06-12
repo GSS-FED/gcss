@@ -26,3 +26,5 @@ Temporary Items
 
 jade/dev
 dev
+*.sublime-project
+*.sublime-workspace
