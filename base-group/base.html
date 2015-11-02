@@ -10,26 +10,26 @@
     <!-- mobile use end-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>base</title>
-    <link href="http://gss-csid.github.io/GCSS/css/basic.css" rel="stylesheet">
+    <link href="http://gss-fed.github.io/GCSS/css/basic.css" rel="stylesheet">
   </head>
   <body class="gcss">
     <!-- ap-wrap-->
     <div class="ap-wrap">
       <!-- ap-nav-->
       <nav class="ap-nav">
-        <div class="info-box"><a href="http://gss-csid.github.io/GCSS" class="info-link">
+        <div class="info-box"><a href="http://gss-fed.github.io/GCSS" class="info-link">
             <h2 class="logo">GCSS</h2></a></div>
         <ul class="nav">
-          <li class="nav-item"><a href="http://gss-csid.github.io/GCSS" class="nav-link">概觀</a></li>
-          <li class="nav-item"><a href="http://gss-csid.github.io/GCSS/style-guide.html" class="nav-link">Style guide</a></li>
-          <li class="nav-item"><a href="http://gss-csid.github.io/GCSS/file-array.html" class="nav-link">檔案結構</a></li>
-          <li class="nav-item has-child"><a href="http://gss-csid.github.io/GCSS/base-group.html" class="nav-link">Base 組成</a>
+          <li class="nav-item"><a href="http://gss-fed.github.io/GCSS" class="nav-link">概觀</a></li>
+          <li class="nav-item"><a href="http://gss-fed.github.io/GCSS/style-guide.html" class="nav-link">Style guide</a></li>
+          <li class="nav-item"><a href="http://gss-fed.github.io/GCSS/file-array.html" class="nav-link">檔案結構</a></li>
+          <li class="nav-item has-child"><a href="http://gss-fed.github.io/GCSS/base-group.html" class="nav-link">Base 組成</a>
             <ul class="sub-nav is-show">
-              <li class="nav-item"><a href="http://gss-csid.github.io/GCSS/base-group/reset.html" class="nav-link">reset</a></li>
-              <li class="nav-item"><a href="http://gss-csid.github.io/GCSS/base-group/variables.html" class="nav-link">variables</a></li>
-              <li class="nav-item"><a href="http://gss-csid.github.io/GCSS/base-group/mixin.html" class="nav-link">mixin</a></li>
-              <li class="nav-item"><a href="http://gss-csid.github.io/GCSS/base-group/tools.html" class="nav-link">tools</a></li>
-              <li class="nav-item"><a href="http://gss-csid.github.io/GCSS/base-group/base.html" class="nav-link is-active">base</a></li>
+              <li class="nav-item"><a href="http://gss-fed.github.io/GCSS/base-group/reset.html" class="nav-link">reset</a></li>
+              <li class="nav-item"><a href="http://gss-fed.github.io/GCSS/base-group/variables.html" class="nav-link">variables</a></li>
+              <li class="nav-item"><a href="http://gss-fed.github.io/GCSS/base-group/mixin.html" class="nav-link">mixin</a></li>
+              <li class="nav-item"><a href="http://gss-fed.github.io/GCSS/base-group/tools.html" class="nav-link">tools</a></li>
+              <li class="nav-item"><a href="http://gss-fed.github.io/GCSS/base-group/base.html" class="nav-link is-active">base</a></li>
             </ul>
           </li>
         </ul>
@@ -50,7 +50,7 @@
             <pre class="code-box"><code><span class="c">// *************************************</span><span class="c">//</span><span class="c">//   Base</span><span class="c">//   -> Tag-level settings</span><span class="c">//</span><span class="c">// *************************************</span><span class="c"> </span><span class="n">html <span class="p">{</span></span><span class="nt">  height: <span class="nv">100%;</span></span><span class="p">} </span><span class="n">body <span class="p">{</span></span><span class="nt">  min-height: <span class="nv">100%;</span></span><span class="nt">  font-family: <span class="nv">"Helvetica Neue", Helvetica, Arial, sans-serif; </span></span><span class="nt">  font-weight: <span class="nv">300;</span></span><span class="nt">  ...</span><span class="p">}</span><span class="c"> </span><span class="c">// -------------------------------------</span><span class="c">//   Block Element</span><span class="c">// -------------------------------------</span><span class="c"> </span><span class="n">%h1, h1 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(34px, 2);</span></span><span class="p">}</span><span class="n">%h2, h2 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(27px, 1.5);</span></span><span class="p">}</span><span class="n">%h3, h3 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(21px, 1.25);</span></span><span class="p">}</span><span class="n">%h4, h4 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(16px);</span></span><span class="p">}</span><span class="n">%h5, h5 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(13px);</span></span><span class="p">}</span><span class="n">%h6, h6 <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(10px, .875);</span></span><span class="p">}</span><span class="n">p, li <span class="p">{</span></span><span class="nt">  @include <span class="nv">adjust-font-size-to(13px);</span></span><span class="p">}    </span><span class="c"> </span><span class="c">// -------------------------------------</span><span class="c">//   inline Element</span><span class="c">// -------------------------------------</span><span class="c"> </span><span class="n">a {</span><span class="nt">  @include <span class="nv">link-colors($c-link, $c-link-hover);</span></span><span class="nt">  text-decoration: <span class="nv">none;</span></span><span class="nt">  -webkit-tap-highlight-color: <span class="nv">rgba(0, 0, 0, .2);</span></span><span class="p">}</span></code></pre>
           </article>
           <div class="page-box group">
-            <div class="page-l"><a href="http://gss-csid.github.io/GCSS/base-group/tools.html" class="p-link"> <span>上一頁</span><span class="p-tip">tools</span></a></div>
+            <div class="page-l"><a href="http://gss-fed.github.io/GCSS/base-group/tools.html" class="p-link"> <span>上一頁</span><span class="p-tip">tools</span></a></div>
             <div class="page-r"></div>
           </div>
         </div>
@@ -58,7 +58,7 @@
       <!-- ap-main end-->
     </div>
     <!-- ap-wrap end-->
-    <script src="http://gss-csid.github.io/GCSS/js/jquery-1.11.1.min.js"></script>
-    <script src="http://gss-csid.github.io/GCSS/js/action.js"></script>
+    <script src="http://gss-fed.github.io/GCSS/js/jquery-1.11.1.min.js"></script>
+    <script src="http://gss-fed.github.io/GCSS/js/action.js"></script>
   </body>
 </html>
